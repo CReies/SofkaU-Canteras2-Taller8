@@ -1,10 +1,6 @@
 # SofkaU-Canteras2-Taller8
 
----
-
 ## Description
-
----
 
 Using the knowledge acquired in class, make a CRUD of a phone contact control system, keep in mind that the contacts must have:
 
@@ -14,8 +10,6 @@ Using the knowledge acquired in class, make a CRUD of a phone contact control sy
 4. Date of birth
 
 ## Requirements
-
----
 
 1. Use an relational DB (MySQL, PostgreSQL, Oracle or MSSQL).
 2. It must be worked with Spring Boot, JPA, API Rest and these APIs must be consumed with fetch or Axios from a web interface.
@@ -28,8 +22,6 @@ The project must be delivered on a git repository (Github or Gitlab) in the foll
 
 ## Instalation
 
----
-
 You must install the front-end dependences in `./front`
 
 ```sh
@@ -37,8 +29,6 @@ npm i
 ```
 
 ## Run
-
----
 
 You have to start a http server for both front and back end
 
