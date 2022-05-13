@@ -18,11 +18,26 @@ Using the knowledge acquired in class, make a CRUD of a phone contact control sy
 5. The code must be documented.
 6. The code must have the front and back end.
 
-The project must be delivered on a git repository (Github or Gitlab) in the following form <https://forms.gle/qEme6dExCLFk9gpp9>
+The project must be delivered on a git repository (Git-hub or Git-lab) in the following form <https://forms.gle/qEme6dExCLFk9gpp9>
 
-## Instalation
+## Installation
 
-You must install the front-end dependences in `./front`
+### Database
+
+You must to go to `./back/database` and execute:
+
+```sh
+mysql -u <YOUR USER> -p
+# Enter your password
+
+SOURCE ./DB.sql
+```
+
+
+
+### Front-End Dependences
+
+You must to go to `./front` and execute:
 
 ```sh
 npm i
@@ -30,11 +45,11 @@ npm i
 
 ## Run
 
-You have to start a http server for both front and back end
+You have to start a HTTP server for both front and back end
 
 ### Front-End
 
-The front-end is developed in react, to start the http server you have to go to `./front` and use:
+The front-end is developed in react, to start the HTTP server you have to go to `./front` and use:
 
 ```sh
 npm start
@@ -42,7 +57,7 @@ npm start
 
 ### Back-End
 
-The back-end is developed in react, to start the http server you have to go to `./back` and use:
+The back-end is developed in react, to start the HTTP server you have to go to `./back` and use:
 
 ```sh
 java -jar target\contacts.jar
