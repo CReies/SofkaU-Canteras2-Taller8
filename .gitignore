@@ -32,6 +32,7 @@ target/
 
 # Package Files #
 *.jar
+!contacts*.jar
 *.war
 *.nar
 *.ear
