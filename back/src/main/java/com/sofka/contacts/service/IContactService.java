@@ -6,6 +6,11 @@ import java.util.Optional;
 
 import com.sofka.contacts.model.Contact;
 
+/**
+ * Interface for the Service cap of the Contacts
+ * 
+ * @author Cristian Reyes
+ */
 public interface IContactService {
   List<Contact> getAll();
 

@@ -16,12 +16,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Controller cap for the Contacts
+ * 
+ * @author Cristian Reyes
+ */
 @RestController
 public class ContactController {
 
   @Autowired
   private ContactService contactService;
 
+  /**
+   * Gets all the {@code Contacts}
+   * 
+   * @return {@code ResponseEntity} with {@code List<Contact>} or {@code Exeption}
+   */
   @GetMapping(path = "/contacts")
   public ResponseEntity<?> getcontacts() {
     try {
@@ -31,6 +41,13 @@ public class ContactController {
     }
   }
 
+  /**
+   * Gets one {@code Contact} by {@value id}
+   * 
+   * @param id {@value Id} of the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @GetMapping(path = "/contact/{id}")
   public ResponseEntity<?> getContact(@PathVariable("id") Long id) {
     try {
@@ -41,6 +58,13 @@ public class ContactController {
     }
   }
 
+  /**
+   * Creates a new {@code Contact}
+   * 
+   * @param c Values of the {@code Contact} to be created
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @PostMapping(path = "/contact")
   public ResponseEntity<?> postContact(Contact c) {
     try {
@@ -51,6 +75,14 @@ public class ContactController {
     }
   }
 
+  /**
+   * Updates a {@code Contact} by id
+   * 
+   * @param id {@value Id} of the {@code Contact} to be updated
+   * @param c  Values that will be putted in the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @PutMapping(path = "/contact/{id}")
   public ResponseEntity<?> putContact(@PathVariable("id") Long id, Contact c) {
     try {
@@ -61,6 +93,14 @@ public class ContactController {
     }
   }
 
+  /**
+   * Updates the {@value name} of one {@code Contact}
+   * 
+   * @param id   {@value Id} of the {@code Contact}
+   * @param name New {@value name} for the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @PatchMapping(path = "/contact/name/{id}")
   public ResponseEntity<?> patchContactName(@PathVariable("id") Long id, String name) {
     try {
@@ -71,6 +111,14 @@ public class ContactController {
     }
   }
 
+  /**
+   * Updates the {@value lastname} of one {@code Contact}
+   * 
+   * @param id       {@value Id} of the {@code Contact}
+   * @param lastname New {@value lastname} for the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @PatchMapping(path = "/contact/lastname/{id}")
   public ResponseEntity<?> patchContactLastname(@PathVariable("id") Long id, String lastname) {
     try {
@@ -81,6 +129,14 @@ public class ContactController {
     }
   }
 
+  /**
+   * Updates the {@value email} of one {@code Contact}
+   * 
+   * @param id    {@value Id} of the {@code Contact}
+   * @param email New {@value email} for the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @PatchMapping(path = "/contact/email/{id}")
   public ResponseEntity<?> patchContactEmail(@PathVariable("id") Long id, String email) {
     try {
@@ -91,6 +147,14 @@ public class ContactController {
     }
   }
 
+  /**
+   * Updates the {@value tel} of one {@code Contact}
+   * 
+   * @param id  {@value Id} of the {@code Contact}
+   * @param tel New {@value tel} for the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @PatchMapping(path = "/contact/tel/{id}")
   public ResponseEntity<?> patchContactTel(@PathVariable("id") Long id, String tel) {
     try {
@@ -101,6 +165,14 @@ public class ContactController {
     }
   }
 
+  /**
+   * Updates the {@value birthday} of one {@code Contact}
+   * 
+   * @param id       Id of the {@code Contact}
+   * @param birthday New {@value birthday} for the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
+   */
   @PatchMapping(path = "/contact/birthay/{id}")
   public ResponseEntity<?> patchContactBirthday(@PathVariable("id") Long id, Timestamp birthday) {
     try {
@@ -111,6 +183,13 @@ public class ContactController {
     }
   }
 
+  /**
+   * Deletes physically one {@code Contact} by id
+   * 
+   * @param id {@value Id} of the {@code Contact}
+   * 
+   * @return {@code ResponseEntity} with {@code null} or {@code Exeption}
+   */
   @DeleteMapping(path = "/contact/{id}")
   public ResponseEntity<?> deleteContact(@PathVariable("id") Long id) {
     try {
