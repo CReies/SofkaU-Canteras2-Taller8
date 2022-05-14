@@ -2,26 +2,34 @@ CREATE DATABASE contacts;
 
 USE contacts;
 
-CREATE TABLE people(
+CREATE TABLE contacts(
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(50) NOT NULL,
   lastname VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  tel VARCHAR(15) NOT NULL,
   birthday TIMESTAMP,
   PRIMARY KEY (id)
 );
 
-CREATE TABLE emails(
-  id INT NOT NULL AUTO_INCREMENT,
-  email VARCHAR(50) NOT NULL,
-  person_id INT NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (person_id) REFERENCES people(id)
-);
+SET
+  time_zone = '-05:00';
 
-CREATE TABLE cellphones(
-  id INT NOT NULL AUTO_INCREMENT,
-  number VARCHAR(15) NOT NULL,
-  person_id INT NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (person_id) REFERENCES people(id)
-);
+INSERT INTO
+  contacts (name, lastname, email, tel, birthday)
+VALUES
+  (
+    "fulanito",
+    "detal",
+    "1231231234",
+    "2000-01-01 00:00:01"
+  );
+
+INSERT INTO
+  contacts (name, lastname, email, tel)
+VALUES
+  (
+    "fulanito2",
+    "detal2",
+    "3213213210"
+  );
