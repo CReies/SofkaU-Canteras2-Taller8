@@ -1,15 +1,23 @@
 import React from 'react';
 import Contact from './Contact';
+import useContacts from '../hooks/useContacts';
 import '../css/Contacts.css';
 
-const Contacts = ({ contacts }) => {
-	const contactsRender = contacts.map(({ id, name, tel }) => (
-		<Contact name={name} tel={tel} key={`contact-${id}`} />
-	));
+const Contacts = () => {
+	const { loading, contacts } = useContacts();
+	const contactsRender = loading
+		? 'loading'
+		: contacts.map((c) => {
+				return (
+					<Contact
+						name={`${c.name} ${c.lastname}`}
+						tel={c.tel}
+						key={`contact-${c.id}`}
+					/>
+				);
+		  });
 
 	return <div className='contacts'>{contactsRender}</div>;
 };
-
-Contacts.propTypes = {};
 
 export default Contacts;

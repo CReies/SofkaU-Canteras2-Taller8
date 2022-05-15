@@ -39,6 +39,7 @@ const AddContactForm = () => {
 				className={'AddContactInput'}
 				label={true}
 			/>
+			
 		</form>
 	);
 };
