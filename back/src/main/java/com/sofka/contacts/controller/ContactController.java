@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 /**
  * Controller cap for the Contacts
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Cristian Reyes
  */
 @RestController
+@CrossOrigin("*")
 public class ContactController {
 
   @Autowired
