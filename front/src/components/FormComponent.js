@@ -8,18 +8,22 @@ const FormComponent = ({
 	icon,
 	typeIcon,
 }) => {
+	const faIcon = icon ? (
+		<FontAwesomeIcon icon={`fa-${typeIcon ?? 'solid'} fa-${icon}`} />
+	) : (
+		<></>
+	);
+
+	const id = `formComponent-${name}`;
+
 	return (
 		<div className='form-group'>
-			{icon ? (
-				<FontAwesomeIcon icon={`fa-${typeIcon ?? 'solid'} fa-${icon}`} />
-			) : (
-				<></>
-			)}
+			{faIcon}
 			<label htmlFor={name}>{name}</label>
 			<input
 				type={type}
 				name={name}
-				id={`addContactForm-${name}`}
+				id={id}
 				placeholder={example ?? name}
 				className={className}
 			/>
