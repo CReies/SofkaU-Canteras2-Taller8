@@ -1,6 +1,7 @@
 .contacts {
 	display: flex;
 	flex-direction: column;
+	cursor: pointer;
 }
 
 .contact {
@@ -12,6 +13,10 @@
 	width: 100%;
 	justify-content: space-between;
 	border-bottom: 1px solid #353535;
+}
+
+.contact:hover {
+	background-color: #202020;
 }
 
 .contact .contactName {

@@ -12,6 +12,7 @@ const Contacts = () => {
 					<Contact
 						name={`${c.name} ${c.lastname}`}
 						tel={c.tel}
+						id={c.id}
 						key={`contact-${c.id}`}
 					/>
 				);
