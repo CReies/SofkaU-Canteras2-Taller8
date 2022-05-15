@@ -1,7 +1,14 @@
 import '../css/App.css';
+import Header from './Header';
 
-function App() {
-	return <></>;
-}
+const App = () => {
+	return (
+		<>
+			<aside>
+				<Header title='Contacts' nContacts='0' />
+			</aside>
+		</>
+	);
+};
 
 export default App;
