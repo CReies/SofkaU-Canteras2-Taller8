@@ -1,0 +1,28 @@
+.contacts {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact {
+	display: flex;
+	flex-direction: row;
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 0px auto;
+	width: 100%;
+	justify-content: space-between;
+	border-bottom: 1px solid #353535;
+}
+
+.contact .contactName {
+	margin: 10px 15px;
+}
+.contact .contactTel {
+	margin: 10px 15px;
+}
+
+@media (max-width: 600px) {
+	.contact .contactTel {
+		display: none;
+	}
+}
