@@ -1,4 +1,3 @@
-import { GifsContextProvider } from '../context/ContactsContext';
 import '../css/App.css';
 import AddContactForm from './AddContactForm';
 import Contacts from './Contacts';
@@ -9,7 +8,6 @@ const App = () => {
 	const nContacts = 'contacts'.length;
 
 	return (
-		<GifsContextProvider>
 			<div className='app'>
 				<aside>
 					<Header title='Contacts' nContacts={nContacts} />
@@ -24,7 +22,6 @@ const App = () => {
 					</section>
 				</main>
 			</div>
-		</GifsContextProvider>
 	);
 };
 
