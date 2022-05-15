@@ -24,6 +24,9 @@ const App = () => {
 			</aside>
 			<main>
 				<section>
+					<FormComponent name='Search' className={'searchInput'} />
+				</section>
+				<section>
 					<Contacts contacts={contacts} />
 				</section>
 			</main>
