@@ -1,17 +1,32 @@
-body {
-	background-color: #242424;
-	color: aliceblue;
+.app {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
 }
 
 aside {
 	display: flex;
 	width: 40vw;
 	border-right: 1px solid #353535;
-	height: 100vh;
+	height: 100%;
+	flex-direction: column;
+}
+
+main {
+	width: 55vw;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: column;
 }
 
 @media (max-width: 600px) {
+	.app {
+		flex-direction: column;
+	}
 	aside {
-		width: 100vw;
+		width: 100%;
+	}
+	main {
+		width: 90vw;
 	}
 }
