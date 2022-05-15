@@ -1,11 +1,3 @@
-html,
-body,
-#root {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-}
-
 body {
 	background-color: #242424;
 	color: aliceblue;

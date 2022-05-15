@@ -8,18 +8,21 @@ const AddContactForm = () => {
 				name='Name'
 				example={'Juanito'}
 				className={'AddContactInput'}
+				label={true}
 			/>
 
 			<FormComponent
 				name='Lastname'
 				example={'Rodriguez'}
 				className={'AddContactInput'}
+				label={true}
 			/>
 
 			<FormComponent
 				name='Tel'
 				example={'Ex: +123123123'}
 				className={'AddContactInput'}
+				label={true}
 			/>
 
 			<FormComponent
@@ -27,12 +30,14 @@ const AddContactForm = () => {
 				type='email'
 				example={'Juanito@example.com'}
 				className={'AddContactInput'}
+				label={true}
 			/>
 
 			<FormComponent
 				name='Birthday'
 				type='date'
 				className={'AddContactInput'}
+				label={true}
 			/>
 		</form>
 	);

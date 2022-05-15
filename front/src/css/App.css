@@ -1,14 +1,13 @@
 .app {
 	display: flex;
 	flex-direction: row;
-	height: 100%;
 }
 
 aside {
 	display: flex;
 	width: 40vw;
 	border-right: 1px solid #353535;
-	height: 100%;
+	min-height: 100vh;
 	flex-direction: column;
 }
 
@@ -24,7 +23,11 @@ main {
 		flex-direction: column;
 	}
 	aside {
+		min-height: auto;
 		width: 100%;
+		border-bottom: 1px solid #353535;
+		border-right: none;
+		margin-bottom: 40px;
 	}
 	main {
 		width: 90vw;

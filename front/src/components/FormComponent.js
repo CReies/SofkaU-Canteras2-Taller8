@@ -7,26 +7,33 @@ const FormComponent = ({
 	className,
 	icon,
 	typeIcon,
+	label,
 }) => {
 	const faIcon = icon ? (
-		<FontAwesomeIcon icon={`fa-${typeIcon ?? 'solid'} fa-${icon}`} />
+		<span className='icon'>
+			<FontAwesomeIcon icon={icon} />
+		</span>
 	) : (
-		<></>
+		''
 	);
+
+	const labelRender = label ? <label htmlFor={name}>{name}</label> : '';
 
 	const id = `formComponent-${name}`;
 
 	return (
 		<div className='form-group'>
-			{faIcon}
-			<label htmlFor={name}>{name}</label>
-			<input
-				type={type}
-				name={name}
-				id={id}
-				placeholder={example ?? name}
-				className={className}
-			/>
+			{labelRender}
+			<div className={icon ? 'input-with-icon' : ''}>
+				<input
+					type={type}
+					name={name}
+					id={id}
+					placeholder={example ?? name}
+					className={className}
+				/>
+				{faIcon}
+			</div>
 		</div>
 	);
 };

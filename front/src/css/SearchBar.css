@@ -1,0 +1,20 @@
+.searchBar {
+	width: 100%;
+	border-bottom: 1px solid #353535;
+	padding-bottom: 50px;
+}
+
+.searchBar .searchInput {
+	border: 0px;
+	padding: 10px 20px;
+	border-radius: 15px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.icon {
+	position: absolute;
+	color: #353535;
+
+	transform: translate(-30px, 10.5px);
+}
