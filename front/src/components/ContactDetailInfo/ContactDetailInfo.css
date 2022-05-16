@@ -1,0 +1,8 @@
+.contactDetailInfo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	flex-direction: row;
+	border-bottom: 1px solid #353535;
+}
