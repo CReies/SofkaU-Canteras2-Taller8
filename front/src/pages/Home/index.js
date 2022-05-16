@@ -1,6 +1,7 @@
 import React from 'react';
 import Contacts from '../../components/Contacts';
 import SearchBar from '../../components/SearchBar';
+import './Home.css'
 
 const Home = () => {
 	return (

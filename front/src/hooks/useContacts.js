@@ -9,10 +9,11 @@ const useContacts = () => {
 	useEffect(() => {
 		setLoading(true);
 
-		getContacts().then((contacts) => {
+		return async () => {
+			const contacts = await getContacts();
 			setContacts(contacts);
 			setLoading(false);
-		});
+		};
 	}, [setContacts]);
 
 	return { loading, contacts };
