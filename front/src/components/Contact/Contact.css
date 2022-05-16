@@ -1,9 +1,3 @@
-.contacts {
-	display: flex;
-	flex-direction: column;
-	cursor: pointer;
-}
-
 .contact {
 	display: flex;
 	flex-direction: row;

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Input.css';
 
-const FormComponent = ({
+const input = ({
 	name,
 	type = 'text',
 	example,
@@ -19,7 +20,7 @@ const FormComponent = ({
 
 	const labelRender = label ? <label htmlFor={name}>{name}</label> : '';
 
-	const id = `formComponent-${name}`;
+	const id = `input-${name}`;
 
 	return (
 		<div className='form-group'>
@@ -38,4 +39,4 @@ const FormComponent = ({
 	);
 };
 
-export default FormComponent;
+export default input;

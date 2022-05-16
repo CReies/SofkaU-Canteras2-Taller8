@@ -1,31 +1,31 @@
-import '../css/AddContactForm.css';
-import FormComponent from './FormComponent';
+import './AddContactForm.css';
+import Input from '../Input/index';
 
 const AddContactForm = () => {
 	return (
 		<form className='AddContactForm'>
-			<FormComponent
+			<Input
 				name='Name'
 				example={'Juanito'}
 				className={'AddContactInput'}
 				label={true}
 			/>
 
-			<FormComponent
+			<Input
 				name='Lastname'
 				example={'Rodriguez'}
 				className={'AddContactInput'}
 				label={true}
 			/>
 
-			<FormComponent
+			<Input
 				name='Tel'
 				example={'Ex: +123123123'}
 				className={'AddContactInput'}
 				label={true}
 			/>
 
-			<FormComponent
+			<Input
 				name='Email'
 				type='email'
 				example={'Juanito@example.com'}
@@ -33,13 +33,12 @@ const AddContactForm = () => {
 				label={true}
 			/>
 
-			<FormComponent
+			<Input
 				name='Birthday'
 				type='date'
 				className={'AddContactInput'}
 				label={true}
 			/>
-			
 		</form>
 	);
 };

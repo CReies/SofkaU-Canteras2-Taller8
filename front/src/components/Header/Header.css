@@ -4,3 +4,7 @@ header {
 	align-items: center;
 	width: 100%;
 }
+
+header .title {
+	cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import './Contact.css';
 
 const Contact = ({ id, name, tel }) => {
 	return (

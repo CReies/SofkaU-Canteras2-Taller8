@@ -1,10 +1,10 @@
 import React from 'react';
-import Contact from './Contact';
-import useContacts from '../hooks/useContacts';
-import '../css/Contacts.css';
+import Contact from '../Contact/index';
+import useContacts from '../../hooks/useContacts';
+import './Contacts.css';
 
 const Contacts = () => {
-	const { loading, contacts } = useContacts();
+	const { contacts, loading } = useContacts();
 	const contactsRender = loading
 		? 'loading'
 		: contacts.map((c) => {
