@@ -23,7 +23,7 @@ const input = ({
 	const id = `input-${name}`;
 
 	return (
-		<div className='form-group'>
+		<div className='formGroup'>
 			{labelRender}
 			<div className={icon ? 'input-with-icon' : ''}>
 				<input
