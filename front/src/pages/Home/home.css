@@ -1,0 +1,35 @@
+.app {
+	display: flex;
+	flex-direction: row;
+}
+
+aside {
+	display: flex;
+	width: 40vw;
+	border-right: 1px solid #353535;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	width: 55vw;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 600px) {
+	.app {
+		flex-direction: column;
+	}
+	aside {
+		min-height: auto;
+		width: 100%;
+		border-bottom: 1px solid #353535;
+		border-right: none;
+		margin-bottom: 40px;
+	}
+	main {
+		width: 90vw;
+	}
+}
