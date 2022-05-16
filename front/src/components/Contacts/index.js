@@ -1,4 +1,3 @@
-import React from 'react';
 import Contact from '../Contact';
 import useContacts from '../../hooks/useContacts';
 import './Contacts.css';

@@ -1,5 +1,4 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
 import './SearchBar.css';
 import Input from '../Input';
 

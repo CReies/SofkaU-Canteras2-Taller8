@@ -1,5 +1,4 @@
-import React from 'react';
-import Contact from '../../components/Contact';
+import ContactDetail from '../../components/ContactDetail';
 import useContact from '../../hooks/useContact';
 
 const Detail = ({ params }) => {
@@ -8,12 +7,7 @@ const Detail = ({ params }) => {
 	const contactRender = loading ? (
 		'loading'
 	) : (
-		<Contact
-			name={`${contact.name} ${contact.lastname}`}
-			tel={contact.tel}
-			id={contact.id}
-			key={`contact-${contact.id}`}
-		/>
+		<ContactDetail contact={contact} />
 	);
 	return <div>{contactRender}</div>;
 };
