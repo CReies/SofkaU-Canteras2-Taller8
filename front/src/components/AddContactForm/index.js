@@ -4,24 +4,19 @@ import Input from '../Input';
 const AddContactForm = () => {
 	return (
 		<form className='addContactForm'>
-			<Input
-				name='Name'
-				example={'Juanito'}
-				className={'addContactInput'}
-				label={true}
-			/>
+			<Input name='Name' example={'Juanito'} className={'input'} label={true} />
 
 			<Input
 				name='Lastname'
 				example={'Rodriguez'}
-				className={'addContactInput'}
+				className={'input'}
 				label={true}
 			/>
 
 			<Input
 				name='Tel'
 				example={'Ex: +123123123'}
-				className={'addContactInput'}
+				className={'input'}
 				label={true}
 			/>
 
@@ -29,16 +24,11 @@ const AddContactForm = () => {
 				name='Email'
 				type='email'
 				example={'Juanito@example.com'}
-				className={'addContactInput'}
+				className={'input'}
 				label={true}
 			/>
 
-			<Input
-				name='Birthday'
-				type='date'
-				className={'addContactInput'}
-				label={true}
-			/>
+			<Input name='Birthday' type='date' className={'input'} label={true} />
 		</form>
 	);
 };

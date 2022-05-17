@@ -7,7 +7,7 @@ const SearchBar = () => {
 		<div className='searchBar'>
 			<Input
 				name='Search'
-				className={'searchInput'}
+				className={'input inputL'}
 				label={false}
 				icon={faSearch}
 			/>

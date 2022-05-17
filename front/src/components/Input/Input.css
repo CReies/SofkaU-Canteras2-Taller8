@@ -2,3 +2,36 @@
 	margin: 5px auto;
 	width: 100%;
 }
+
+.input-with-icon .icon {
+	position: absolute;
+	color: #353535;
+}
+
+.input-with-icon .inputL + .icon {
+	transform: translate(-45px, 20px);
+}
+.input-with-icon .inputS + .icon {
+	transform: translate(-45px, 15px);
+}
+
+.input {
+	margin: 10px auto;
+	border: 0px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.inputL {
+	padding: 10px 20px;
+	border-radius: 15px;
+}
+
+.inputS {
+	padding: 5px 10px;
+	border-radius: 15px;
+}
+
+

@@ -5,15 +5,6 @@
 	flex-direction: column;
 }
 
-.addContactInput {
-	margin: 10px auto;
-	border: 0px;
-	padding: 5px 10px;
-	border-radius: 10px;
-	width: 100%;
-	box-sizing: border-box;
-}
-
 .addContactInput:focus {
 	background-color: #e6e6ff;
 	transition: 0.3s;

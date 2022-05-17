@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Input.css';
 
-const input = ({
+const Input = ({
 	name,
+	nameId,
 	type = 'text',
 	example,
 	className,
 	icon,
-	typeIcon,
 	label,
+	handleOnChange,
+	value,
 }) => {
 	const faIcon = icon ? (
 		<span className='icon'>
@@ -20,7 +22,7 @@ const input = ({
 
 	const labelRender = label ? <label htmlFor={name}>{name}</label> : '';
 
-	const id = `input-${name}`;
+	const id = `input-${nameId || name}`;
 
 	return (
 		<div className='formGroup'>
@@ -32,11 +34,13 @@ const input = ({
 					id={id}
 					placeholder={example ?? name}
 					className={className}
+					value={value}
+					onChange={handleOnChange}
 				/>
-				{faIcon}
+				<button className='icon'>{faIcon}</button>
 			</div>
 		</div>
 	);
 };
 
-export default input;
+export default Input;
