@@ -15,8 +15,8 @@ const AddContactForm = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		addContact({ name, lastname, tel, email, birthday });
 		setPath('/', true);
+		addContact({ name, lastname, tel, email, birthday });
 	};
 
 	return (

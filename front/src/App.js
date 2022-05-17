@@ -11,7 +11,9 @@ const App = () => {
 		<div className='app'>
 			<aside>
 				<Header title='Contacts' />
-				<AddContactForm />
+				<div className='onlyPc'>
+					<AddContactForm />
+				</div>
 			</aside>
 			<main>
 				<Route component={Home} path='/' />
