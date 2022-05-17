@@ -9,9 +9,7 @@ const addContact = async (body) => {
 	};
 
 	try {
-		const res = await fetch('http://localhost:9090/contact', reqData);
-		const resData = await res.json();
-		console.log(resData);
+		await fetch('http://localhost:9090/contact', reqData);
 	} catch (error) {
 		console.log(error);
 	}

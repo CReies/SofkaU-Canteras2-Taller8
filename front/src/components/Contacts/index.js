@@ -4,6 +4,7 @@ import './Contacts.css';
 
 const Contacts = () => {
 	const { contacts, loading } = useContacts();
+	
 	const contactsRender = loading
 		? 'loading'
 		: contacts.map((c) => {

@@ -1,8 +1,9 @@
 import './AddContactForm.css';
 import addContact from '../../services/addContact';
 import Input from '../Input';
-import Button from '../button';
+import Button from '../Button';
 import { useState } from 'react';
+import { useLocation } from 'wouter';
 
 const AddContactForm = () => {
 	const [name, setName] = useState('');
@@ -10,10 +11,12 @@ const AddContactForm = () => {
 	const [tel, setTel] = useState('');
 	const [email, setEmail] = useState('');
 	const [birthday, setBirthday] = useState('');
+	const [, setPath] = useLocation();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		addContact({ name, lastname, tel, email, birthday });
+		setPath('/', true);
 	};
 
 	return (
