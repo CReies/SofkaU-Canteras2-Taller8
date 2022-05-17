@@ -38,7 +38,7 @@ const ContactDetailInfo = ({ id, name, info }) => {
 					label={false}
 					nameId={`edit-${name}-${id}`}
 					name={`Edit ${name}`}
-					icon={!isBirthday ? faChevronRight : ''}
+					icon={faChevronRight}
 					className='input inputS'
 					value={inputValue}
 					handleOnChange={handleChange}

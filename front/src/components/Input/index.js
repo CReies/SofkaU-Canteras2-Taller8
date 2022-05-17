@@ -37,7 +37,9 @@ const Input = ({
 					value={value}
 					onChange={handleOnChange}
 				/>
-				<button className='icon'>{faIcon}</button>
+				<button className={`icon ${type === 'date' ? 'icon-date' : ''}`}>
+					{faIcon}
+				</button>
 			</div>
 		</div>
 	);
