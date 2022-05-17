@@ -6,3 +6,29 @@
 	flex-direction: row;
 	border-bottom: 1px solid #353535;
 }
+.contactDetailInfo .name {
+	width: 30%;
+}
+.contactDetailInfo .info {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: right;
+}
+.contactDetailInfo .info span svg {
+	cursor: pointer;
+}
+.contactDetailInfo .info span svg:hover {
+	color: #cccccc;
+}
+.contactDetailInfo .info h4,
+span {
+	margin: auto 10px;
+}
+
+@media (max-width: 600px) {
+	.contactDetailInfo .info {
+		width: 65%;
+	}
+}
