@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
@@ -68,7 +69,7 @@ public class ContactController {
    * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
    */
   @PostMapping(path = "/contact")
-  public ResponseEntity<?> postContact(Contact c) {
+  public ResponseEntity<?> postContact(@RequestBody Contact c) {
     try {
       contactService.push(c);
       return new ResponseEntity<>(c, HttpStatus.CREATED);
@@ -86,7 +87,7 @@ public class ContactController {
    * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
    */
   @PutMapping(path = "/contact/{id}")
-  public ResponseEntity<?> putContact(@PathVariable("id") Long id, Contact c) {
+  public ResponseEntity<?> putContact(@PathVariable("id") Long id, @RequestBody Contact c) {
     try {
       contactService.update(id, c);
       return new ResponseEntity<>(c, HttpStatus.CREATED);
@@ -104,7 +105,7 @@ public class ContactController {
    * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
    */
   @PatchMapping(path = "/contact/name/{id}")
-  public ResponseEntity<?> patchContactName(@PathVariable("id") Long id, String name) {
+  public ResponseEntity<?> putContactName(@PathVariable("id") Long id, @RequestBody String name) {
     try {
       var c = contactService.updateName(id, name);
       return new ResponseEntity<>(c, HttpStatus.CREATED);
@@ -122,7 +123,7 @@ public class ContactController {
    * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
    */
   @PatchMapping(path = "/contact/lastname/{id}")
-  public ResponseEntity<?> patchContactLastname(@PathVariable("id") Long id, String lastname) {
+  public ResponseEntity<?> putContactLastname(@PathVariable("id") Long id, @RequestBody String lastname) {
     try {
       var c = contactService.updateLastname(id, lastname);
       return new ResponseEntity<>(c, HttpStatus.CREATED);
@@ -140,7 +141,7 @@ public class ContactController {
    * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
    */
   @PatchMapping(path = "/contact/email/{id}")
-  public ResponseEntity<?> patchContactEmail(@PathVariable("id") Long id, String email) {
+  public ResponseEntity<?> putContactEmail(@PathVariable("id") Long id, @RequestBody String email) {
     try {
       var c = contactService.updateEmail(id, email);
       return new ResponseEntity<>(c, HttpStatus.CREATED);
@@ -158,7 +159,7 @@ public class ContactController {
    * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
    */
   @PatchMapping(path = "/contact/tel/{id}")
-  public ResponseEntity<?> patchContactTel(@PathVariable("id") Long id, String tel) {
+  public ResponseEntity<?> putContactTel(@PathVariable("id") Long id, @RequestBody String tel) {
     try {
       var c = contactService.updateTel(id, tel);
       return new ResponseEntity<>(c, HttpStatus.CREATED);
@@ -176,7 +177,7 @@ public class ContactController {
    * @return {@code ResponseEntity} with {@code Contact} or {@code Exeption}
    */
   @PatchMapping(path = "/contact/birthay/{id}")
-  public ResponseEntity<?> patchContactBirthday(@PathVariable("id") Long id, Timestamp birthday) {
+  public ResponseEntity<?> putContactBirthday(@PathVariable("id") Long id, @RequestBody Timestamp birthday) {
     try {
       var c = contactService.updateBirthday(id, birthday);
       return new ResponseEntity<>(c, HttpStatus.CREATED);
