@@ -58,5 +58,6 @@ npm start
 The back-end is developed in react, to start the HTTP server you have to go to `./back` and use:
 
 ```sh
-java -jar contacts-"version"-.jar
+java -jar contacts.jar
 ```
+
