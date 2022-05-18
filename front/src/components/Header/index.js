@@ -2,9 +2,16 @@ import { Link, useLocation } from 'wouter';
 import Button from '../Button';
 import './Header.css';
 
-const Header = ({ title, nContacts }) => {
+/**
+ * Header component, shows a button that redirects to '/new' if the app is displayed in mobile
+ *
+ * @param {Object} props Component props
+ * @returns Header component
+ */
+const Header = ({ title }) => {
 	const [, setPath] = useLocation();
 
+	// Redirects to '/new'
 	const handleClick = () => {
 		setPath('/new');
 	};

@@ -1,3 +1,8 @@
+/**
+ * Posts a contact to the api
+ *
+ * @param {Object} body Contact data
+ */
 const addContact = async (body) => {
 	const reqData = {
 		method: 'POST',

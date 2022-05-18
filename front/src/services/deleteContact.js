@@ -1,4 +1,9 @@
-const deleteContact = async ({ id }) => {
+/**
+ * Deletes a contact using the api
+ *
+ * @param {Number} id  id of the contact
+ */
+const deleteContact = async (id) => {
 	const url = `http://localhost:9090/contact/${id}`;
 	const reqData = {
 		method: 'DELETE',

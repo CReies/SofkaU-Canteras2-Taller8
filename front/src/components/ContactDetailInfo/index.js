@@ -5,6 +5,13 @@ import editContact from '../../services/editContact';
 import Input from '../Input';
 import './ContactDetailInfo.css';
 
+/**
+ * ContactDetailInfo component
+ * Shows one contact field and handle the contact editing
+ *
+ * @param {Object} props Component props
+ * @returns ContactDetailInfo component
+ */
 const ContactDetailInfo = ({ id, name, info }) => {
 	const [isEditing, setEditing] = useState(false);
 	const [inputValue, setInputValue] = useState(info);
@@ -21,18 +28,18 @@ const ContactDetailInfo = ({ id, name, info }) => {
 	const submitChange = (e) => {
 		e.preventDefault();
 		setInputValue(e.target[0].value);
-		editContact({
-			id,
-			value: inputValue,
-			info: name.toLocaleLowerCase(),
-		});
-		console.log(inputValue);
+
+		editContact(id, inputValue, name.toLocaleLowerCase());
+
 		setEditing(false);
 	};
+
 	const isBirthday = name === 'Birthday';
 
+	// What will be rendered depending if is editing or not
 	const infoRender = isEditing ? (
 		<>
+			{/* If is editing, renders a form to handle the contact editing */}
 			<form onSubmit={(e) => submitChange(e)} className='w-100'>
 				<Input
 					label={false}
@@ -48,6 +55,7 @@ const ContactDetailInfo = ({ id, name, info }) => {
 		</>
 	) : (
 		<>
+			{/* If isn't editing only shows the info and the edit button */}
 			<h5>{inputValue ?? info}</h5>
 			<span onClick={handleClick}>
 				<FontAwesomeIcon icon={faEdit} />

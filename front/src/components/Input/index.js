@@ -1,6 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Input.css';
 
+/**
+ * Dinamic input component
+ *
+ * @param {Object} props Component props
+ * @returns Input component
+ */
 const Input = ({
 	name,
 	nameId,
@@ -12,6 +18,7 @@ const Input = ({
 	handleOnChange,
 	value,
 }) => {
+	// Fontawesome icon if available
 	const faIcon = icon ? (
 		<span className='icon'>
 			<FontAwesomeIcon icon={icon} />
@@ -20,8 +27,10 @@ const Input = ({
 		''
 	);
 
+	// If label is true renders the lable
 	const labelRender = label ? <label htmlFor={name}>{name}</label> : '';
 
+	// The input id
 	const id = `input-${nameId || name}`;
 
 	return (

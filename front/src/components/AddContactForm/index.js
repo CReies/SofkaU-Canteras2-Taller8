@@ -5,6 +5,12 @@ import Button from '../Button';
 import { useState } from 'react';
 import { useLocation } from 'wouter';
 
+/**
+ * AddContactComponent
+ * Renders a form where the user can add a contact
+ *
+ * @returns AddContactForm component
+ */
 const AddContactForm = () => {
 	const [name, setName] = useState('');
 	const [lastname, setLastname] = useState('');

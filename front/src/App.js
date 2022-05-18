@@ -6,6 +6,13 @@ import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NewContact from './pages/NewContact';
 
+/**
+ * Main app
+ *
+ * @author Cristian Reyes
+ *
+ * @returns React component
+ */
 const App = () => {
 	return (
 		<div className='app'>
